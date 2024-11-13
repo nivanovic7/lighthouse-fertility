@@ -12,8 +12,13 @@
   --clr-secondary-stone: #f0f1f0;
 
   --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  --border-radius: 30px;
+
+  --section-gap: 8rem;
 }
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -65,7 +70,7 @@ body {
   color: var(--clr-primary-blue);
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: var(--section-gap);
   font-family: "Host Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -74,18 +79,46 @@ body {
   font-size: 16px;
 }
 
-section,
-nav {
-  max-width: 1400;
+section {
+  max-width: 1400px;
   flex: 1;
   margin: auto;
   width: 90%;
 }
 
 nav {
+  width: 100%;
+  position: sticky;
+  top: 0rem;
+}
+
+#nav-observer {
+  position: absolute;
+  top: 50px;
+  height: 0;
+}
+
+.nav-wrap {
+  padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: width 0.5s ease-in-out, border-radius 0.3s ease-in-out,
+    margin 0.3s;
+  transform-origin: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.nav-not-at-top {
+  max-width: 1400px;
+  width: 90%;
+  margin-top: 0.5rem;
+  border-radius: 100px;
+  z-index: 100;
 }
 
 img {
@@ -99,7 +132,7 @@ img {
   line-height: 1.1;
 }
 .secondary-heading {
-  font-size: 35px;
+  font-size: 40px;
   line-height: 1.2;
   color: var(--clr-primary-navy);
   margin-bottom: 4rem;
@@ -118,6 +151,33 @@ img {
   gap: 1rem;
   padding: 2rem 0;
 }
+
+/*------------- SECTION ABOUT ME -------------  */
+
+.section-about-wrap {
+  display: flex;
+}
+
+.img-wrap {
+  z-index: -10;
+  /* background-image: url("./assets/concrete.png"); */
+  background-color: var(--clr-secondary-gray-blue);
+  background-size: cover;
+  border-radius: var(--border-radius);
+  /* padding: 2rem; */
+}
+
+.section-about img {
+  display: block;
+  max-height: 1000px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  position: relative;
+  left: 2rem;
+  top: 2rem;
+  border: 2px solid var(--clr-secondary-stone);
+}
+/*------------- SECTION HERO -------------  */
 
 .hero-wrap {
   max-width: 550px;
@@ -151,15 +211,22 @@ img {
   align-self: flex-start;
   margin: 3rem 0;
   padding: 1.25rem 3rem;
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   font-size: 18px;
 }
 
 .lighthouse-image-wrap {
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
+.lighthouse-image-wrap img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*-------- SECTION CARDS -------- */
 .cards {
   display: flex;
   gap: 2rem;
@@ -169,7 +236,7 @@ img {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   background: white;
   flex: 1;
   box-shadow: var(--box-shadow);
@@ -195,7 +262,7 @@ h3 {
   width: 100%;
   text-align: center;
   color: var(--clr-secondary-stone);
-  padding: 6rem 0;
+  padding: 8rem 0;
 
   background: linear-gradient(
       rgba(12, 63, 107, 0.766),
@@ -230,14 +297,22 @@ h3 {
   border: none;
 }
 
+/*-------- SECTION EXPERTISE -------- */
+
 .expertise-section {
-  border-top: 1px solid var(--clr-primary-blue);
-  padding-top: 2rem;
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  background-color: white;
+  width: 100%;
+  max-width: none;
 }
 
 .expertise-content-wrap {
   display: flex;
   justify-content: space-between;
+  max-width: 1400px;
+  width: 90%;
+  margin: auto;
 }
 
 .expertise-list {
@@ -252,9 +327,8 @@ h3 {
   flex-direction: column;
   overflow: hidden;
   cursor: pointer;
-  padding: 0 1rem;
   transition: transform 0.3s ease-in-out;
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   padding: 1rem;
   box-shadow: var(--box-shadow);
 }
@@ -265,8 +339,8 @@ h3 {
 
 .show-expertise-list-item {
   /* background-color: #d4d5d5; */
-  background-color: var(--clr-primary-blue);
-  color: #f0f1f0;
+  background-color: var(--clr-secondary-stone);
+  color: var(--clr-primary-navy);
 }
 
 .expertise-list-item-desc,
@@ -278,7 +352,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .expertise-list img {
@@ -303,4 +376,5 @@ h3 {
 .show-list-item-desc {
   max-height: 200px;
   overflow: visible;
+  padding-top: 1rem;
 }

@@ -66,6 +66,11 @@ table {
 body {
   background-color: var(--clr-secondary-stone);
 }
+
+button {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
 #app {
   color: var(--clr-primary-blue);
   display: flex;
@@ -152,30 +157,77 @@ img {
   padding: 2rem 0;
 }
 
+nav a {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 /*------------- SECTION ABOUT ME -------------  */
 
 .section-about-wrap {
   display: flex;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .img-wrap {
   z-index: -10;
-  /* background-image: url("./assets/concrete.png"); */
-  background-color: var(--clr-secondary-gray-blue);
+  max-width: 40%;
+
   background-size: cover;
-  border-radius: var(--border-radius);
-  /* padding: 2rem; */
+  flex-grow: 1;
+  position: relative;
 }
 
 .section-about img {
   display: block;
-  max-height: 1000px;
-  object-fit: cover;
+  max-height: 500px;
   border-radius: var(--border-radius);
-  position: relative;
+  object-fit: cover;
+  width: 100%;
+
+  /* border-radius: var(--border-radius); */
+  /* position: relative;
   left: 2rem;
   top: 2rem;
-  border: 2px solid var(--clr-secondary-stone);
+  border: 2px solid var(--clr-secondary-stone); */
+}
+
+/* Probably not going to use this animation and after element, this was just for testing */
+
+/* .img-wrap::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-image: url("./assets/Logo\ mark\ navy.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -25%;
+  opacity: 0.1;
+  right: -25%;
+  z-index: -1;
+  transform: rotate(360deg);
+  animation: rotating 60s linear infinite;
+} */
+
+/* @-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+} */
+
+.about-me-text {
+  max-width: 600px;
 }
 /*------------- SECTION HERO -------------  */
 

@@ -28,3 +28,34 @@ if (
   });
   observer.observe(document.getElementById("nav-observer"));
 }
+
+const form = document.getElementById("contact-form");
+const responseMessage = document.getElementById("response-message");
+const errorMessage = document.getElementById("error-message");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch("/.netlify/functions/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      responseMessage.style.display = "block";
+      errorMessage.style.display = "none";
+      form.reset();
+    } else {
+      throw new Error(result.error);
+    }
+  } catch (error) {
+    errorMessage.style.display = "block";
+    responseMessage.style.display = "none";
+  }
+});

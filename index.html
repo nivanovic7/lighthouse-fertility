@@ -201,6 +201,24 @@
             <button class="cta-secondary">Book a meeting</button>
           </div>
         </div>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send</button>
+          <p id="response-message" style="color: green; display: none">
+            Message sent successfully!
+          </p>
+          <p id="error-message" style="color: red; display: none">
+            Failed to send message. Please try again.
+          </p>
+        </form>
       </section>
 
       <section>
@@ -242,9 +260,15 @@
           <img src="./assets/Linear white.svg" alt="logo" />
           <div>
             <div class="contact-info">
-              <span>phone: </span> <span class="highlight">+13492u295u25</span>
-              <span>email: </span>
-              <span class="highlight">simon@lighthouse.life</span>
+              <p>
+                <span>phone: </span>
+                <span class="highlight">+44 7969 626083</span>
+              </p>
+
+              <p>
+                <span>email: </span
+                ><span class="highlight">lumsdon1984@googlemail.com</span>
+              </p>
             </div>
           </div>
           <div class="social-links">

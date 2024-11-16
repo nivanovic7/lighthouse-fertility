@@ -28,19 +28,3 @@ if (
   });
   observer.observe(document.getElementById("nav-observer"));
 }
-
-const form = document.getElementById("contact-form");
-const responseMessage = document.getElementById("response-message");
-const errorMessage = document.getElementById("error-message");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
-
-  emailjs.send("service_vz7ov9p", "template_k8lk5z3", params);
-});

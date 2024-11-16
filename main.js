@@ -36,26 +36,11 @@ const errorMessage = document.getElementById("error-message");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
+  const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
 
-  try {
-    const response = await fetch("/.netlify/functions/sendEmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      responseMessage.style.display = "block";
-      errorMessage.style.display = "none";
-      form.reset();
-    } else {
-      throw new Error(result.error);
-    }
-  } catch (error) {
-    errorMessage.style.display = "block";
-    responseMessage.style.display = "none";
-  }
+  emailjs.send("service_vz7ov9p", "template_k8lk5z3", params);
 });

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/Logo mark navy.png" />
+    <script src="https://use.fontawesome.com/69d78ac413.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Lighthouse Fertility</title>
   </head>
@@ -15,10 +17,10 @@
             <img src="./assets/Linear navy.png" alt="logo" />
           </div>
           <ul class="navigation">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Book a meeting</a></li>
+            <li><a href="#app">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#book-a-meeting">Book a meeting</a></li>
           </ul>
         </div>
       </nav>
@@ -153,10 +155,10 @@
           </ul>
         </div>
       </section>
-      <section class="section-about">
+      <section id="about" class="section-about">
         <div class="section-about-wrap">
           <div class="img-wrap">
-            <img src="./assets/bussinesman.jpg" alt="bussinesman" />
+            <img src="./assets/simon.jpeg" alt="bussinesman" />
           </div>
           <div class="about-me-text">
             <h2 class="secondary-heading">About me</h2>
@@ -171,7 +173,7 @@
         </div>
       </section>
       <!-- Calendly inline widget begin -->
-      <section>
+      <!-- <section id="book-a-meeting">
         <div
           class="calendly-inline-widget"
           data-url="https://calendly.com/ivanovic-nikola-ns/30min"
@@ -182,9 +184,9 @@
           src="https://assets.calendly.com/assets/external/widget.js"
           async
         ></script>
-      </section>
+      </section> -->
       <!-- Calendly inline widget end -->
-      <section class="cta-section">
+      <section id="contact" class="cta-section">
         <div class="cta-content-wrap">
           <h2 class="secondary-heading">
             Ready to Transform Your Go-to-Market Strategy?
@@ -194,9 +196,72 @@
             form below or schedule a call directly. Expect a follow-up within 24
             hours.
           </p>
-          <button class="cta">Get in Touch</button>
+          <div>
+            <button class="cta">Get in Touch</button>
+            <button class="cta-secondary">Book a meeting</button>
+          </div>
         </div>
       </section>
+
+      <section>
+        <h2 class="secondary-heading">Testimonials</h2>
+        <div class="cards">
+          <div class="card">
+            <span>01</span>
+            <h3 class="tertiary-heading">John Doe</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              dolor corporis nesciunt quo tenetur enim ea temporibus perferendis
+              molestiae vitae.
+            </p>
+          </div>
+          <div class="card">
+            <span>02</span>
+            <h3 class="tertiary-heading">John Doe</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              dolor corporis nesciunt quo tenetur enim ea temporibus perferendis
+              molestiae vitae.
+            </p>
+          </div>
+
+          <div class="card">
+            <span>03</span>
+            <h3 class="tertiary-heading">John Doe</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              dolor corporis nesciunt quo tenetur enim ea temporibus perferendis
+              molestiae vitae.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <img src="./assets/Linear white.svg" alt="logo" />
+          <div>
+            <div class="contact-info">
+              <span>phone: </span> <span class="highlight">+13492u295u25</span>
+              <span>email: </span>
+              <span class="highlight">simon@lighthouse.life</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/">Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com">Instagram</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

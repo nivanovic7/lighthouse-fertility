@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:5174/dashboard/map -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="./Vite + React_files/sdk.js.download" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Vite + React_files/sdk(1).js.download"></script><script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./Vite + React_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5174/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/Form/Form.module.css">._form_1whzk_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+  max-width: 500px;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/ErrorMessage/ErrorMessage.module.css">._error_t7qst_1 {
+  background-color: rgba(220, 70, 70, 0.4);
+  padding: 1rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/input/Input.module.css">._wrap_ggyxu_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+._input_ggyxu_13 {
+  padding: 0.5rem 1rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/pages/dashboard/Dashboard.module.css">._dashboard_iqjdk_1 > a {
+  margin: 1rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/post/Post.module.css"></style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/node_modules/react-multi-carousel/lib/styles.css">@font-face{font-family:"revicons";fallback:fallback;src:url("/node_modules/react-multi-carousel/lib/revicons.woff") format('woff'),url("/node_modules/react-multi-carousel/lib/revicons.ttf") format('ttf'),url("/node_modules/react-multi-carousel/lib/revicons.eot") format('ttf')}.react-multi-carousel-list{display:flex;align-items:center;overflow:hidden;position:relative}.react-multi-carousel-track{list-style:none;padding:0;margin:0;display:flex;flex-direction:row;position:relative;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,transition}.react-multiple-carousel__arrow{position:absolute;outline:0;transition:all .5s;border-radius:35px;z-index:1000;border:0;background:rgba(0,0,0,0.5);min-width:43px;min-height:43px;opacity:1;cursor:pointer}.react-multiple-carousel__arrow:hover{background:rgba(0,0,0,0.8)}.react-multiple-carousel__arrow::before{font-size:20px;color:#fff;display:block;font-family:revicons;text-align:center;z-index:2;position:relative}.react-multiple-carousel__arrow:disabled{cursor:default;background:rgba(0,0,0,0.5)}.react-multiple-carousel__arrow--left{left:calc(4% + 1px)}.react-multiple-carousel__arrow--left::before{content:"\e824"}.react-multiple-carousel__arrow--right{right:calc(4% + 1px)}.react-multiple-carousel__arrow--right::before{content:"\e825"}.react-multi-carousel-dot-list{position:absolute;bottom:0;display:flex;left:0;right:0;justify-content:center;margin:auto;padding:0;margin:0;list-style:none;text-align:center}.react-multi-carousel-dot button{display:inline-block;width:12px;height:12px;border-radius:50%;opacity:1;padding:5px 5px 5px 5px;box-shadow:none;transition:background .5s;border-width:2px;border-style:solid;border-color:grey;padding:0;margin:0;margin-right:6px;outline:0;cursor:pointer}.react-multi-carousel-dot button:hover:active{background:#080808}.react-multi-carousel-dot--active button{background:#080808}.react-multi-carousel-item{transform-style:preserve-3d;backface-visibility:hidden}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.react-multi-carousel-item{flex-shrink:0 !important}.react-multi-carousel-track{overflow:visible !important}}[dir='rtl'].react-multi-carousel-list{direction:rtl}.rtl.react-multiple-carousel__arrow--right{right:auto;left:calc(4% + 1px)}.rtl.react-multiple-carousel__arrow--right::before{content:"\e824"}.rtl.react-multiple-carousel__arrow--left{left:auto;right:calc(4% + 1px)}.rtl.react-multiple-carousel__arrow--left::before{content:"\e825"}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/CustomCarousel/CustomCarousel.module.css">._video_7p2ix_1 video,
+._image_7p2ix_3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  object-position: center;
+}
+
+._carousel_7p2ix_19 {
+  height: 300px;
+}
+
+._carousel_7p2ix_19 ul {
+  /* max-width: 100%; */
+  max-height: 100%;
+  gap: 0;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/postHeader/PostHeader.module.css">._postHeader_xx7yp_1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+._userName_xx7yp_11 {
+  position: relative;
+}
+
+._userName_xx7yp_11:hover ._addUser_xx7yp_19 {
+  display: block;
+}
+
+._addUser_xx7yp_19 {
+  position: absolute;
+  top: -120%;
+  right: 0;
+  background-color: red;
+  display: none;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/comments/Comments.module.css">._comments_eo0a2_1 {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  max-height: 200px;
+  overflow-x: scroll;
+  scrollbar-gutter: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+._comments_eo0a2_1::-webkit-scrollbar {
+  display: none;
+}
+
+._comment_eo0a2_1 {
+  display: block;
+  align-items: end;
+  padding: 0.5rem;
+  border-bottom: 1px solid aliceblue;
+}
+
+._comment_eo0a2_1 div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+._comment_eo0a2_1 p {
+  text-align: left;
+}
+._userName_eo0a2_61 {
+  color: rgb(175, 175, 225);
+  align-self: start;
+}
+._date_eo0a2_69 {
+  margin-left: auto;
+}
+
+._comment_eo0a2_1 i {
+  font-size: 0.75rem;
+  color: gray;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/createComment/CreateComment.module.css">._form_1pnia_1 input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  display: block;
+  width: calc(100% - 1rem);
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/postLoader/PostLoader.module.css">._container_247i1_1 {
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  padding: 0.5rem;
+  animation: _pulse_247i1_1 1.5s infinite ease-in-out;
+  background: #f0f0f0;
+  margin: auto;
+  border-radius: 5px;
+}
+._title_247i1_21,
+._image_247i1_23 {
+  width: 100%;
+  border-radius: 5px;
+}
+
+._title_247i1_21 {
+  height: 7%;
+  margin-bottom: 5%;
+  background: #e0e0e0;
+}
+
+._image_247i1_23 {
+  height: 90%;
+  background-image: url("../assets/picture-image-svgrepo-com.svg");
+  background-size: 40%;
+  background: #e0e0e0;
+  background-repeat: no-repeat;
+}
+
+@keyframes _pulse_247i1_1 {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #d0d0d0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/ChatList/ChatList.module.css">._chatList_g7vo0_1 {
+  width: 30%;
+  background-color: aliceblue;
+  height: 100%;
+}
+
+._chatList_g7vo0_1 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/chatListItem/ChatListItem.module.css">._chatItem_os6ls_1 {
+  display: block;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+._chatItem_os6ls_1:hover {
+  background-color: rgb(223, 232, 239);
+  cursor: pointer;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/ChatBox/ChatBox.module.css">._chat_1p7pc_1 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding-bottom: 2rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/SendMessage/SendMessage.module.css">._form_1f8lk_1 {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+
+._form_1f8lk_1 input {
+  padding: 0.5rem;
+}
+
+._form_1f8lk_1 input[type="file"] {
+  display: none;
+}
+
+._uploadFile_1f8lk_29 {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/pages/inbox/Inbox.module.css">._inbox_1cur5_1 {
+  display: flex;
+  height: 94vh;
+  font-weight: 400;
+  font-style: normal;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/headers/header/Header.module.css">._header_381mo_1 {
+  background-color: rgb(221, 231, 228);
+  text-align: center;
+  padding: 1rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/navigation/Navigation.module.css">._nav_12fv9_1 {
+  display: flex;
+  align-items: center;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/logoutButton/LogoutButton.module.css">._logoutButton_1epgu_1 {
+  margin-left: auto;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/components/footers/footer/Footer.module.css">._footer_i5527_1 {
+  background-color: rgb(27, 26, 26);
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+}
+
+._footer_i5527_1 img {
+  width: 30px;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/portfolio-projects/test3/src/index.css">@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.map {
+  height: 400px;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+}
+
+/*
+Commented this to see if it works without it and it does somehow. Will delete afterwards */
+
+.userMessage,
+.friendMessage {
+  color: white;
+  padding: 0.3rem;
+  margin: 0.2rem;
+}
+
+.messageUserName {
+  color: gray;
+}
+
+.userMessage {
+  margin-left: auto;
+}
+
+.userMessage .messageText {
+  background-color: rgb(172, 172, 233);
+}
+
+.friendMessage .messageText {
+  background-color: gray;
+}
+
+.friendMessage {
+  margin-right: auto;
+}
+</style><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0px;margin:0px;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0px 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+  <body>
+    <div id="root"><div><div class="_header_381mo_1"><ul class="_nav_12fv9_1"><li><img src="./Vite + React_files/home-icon-silhouette.png" alt="icon" style="
+    width: 50px;
+"><a class="active" href="http://localhost:5174/dashboard" aria-current="page">Dashboard</a></li><li><img src="./Vite + React_files/home-icon-silhouette.png" alt="icon"><a class="" href="http://localhost:5174/profile">Profile</a></li><li><img src="./Vite + React_files/home-icon-silhouette.png" alt="icon"><a class="" href="http://localhost:5174/inbox">Inbox</a></li><li class="_logoutButton_1epgu_1"><button>Logout</button></li><li>1111111111111</li></ul><h1>Dashboard</h1><p>Home--&gt;dashboard--&gt;map</p></div><div class="_dashboard_iqjdk_1"><a class="active" href="http://localhost:5174/dashboard/map" aria-current="page">Set Location</a><div class="map leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="./Vite + React_files/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(17px, 72px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/5(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(273px, 72px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(17px, -184px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/4(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(273px, -184px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(17px, 328px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/6(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(273px, 328px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/5(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-239px, 72px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/5(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(529px, 72px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/4(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-239px, -184px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/4(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(529px, -184px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/6(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-239px, 328px, 0px); opacity: 1;"><img alt="" src="./Vite + React_files/6(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(529px, 328px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./Vite + React_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(300px, 200px, 0px);"></div><div class="leaflet-pane leaflet-marker-pane"><img src="./Vite + React_files/marker-icon-2x.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="Marker" tabindex="0" role="button" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(300px, 200px, 0px); z-index: 200;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(2075.31px, 1408.39px, 0px) scale(8);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://localhost:5174/dashboard/map#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="http://localhost:5174/dashboard/map#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div><button>Use map location</button><span> Or... </span><button>Use your coordinates</button></div><div class="_footer_i5527_1"><img src="./Vite + React_files/Logo.PIM.png" alt="logo"><h2>Social app</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto omnis id sequi?</p></div></div></div>
+    <script type="module" src="./Vite + React_files/main.jsx"></script>
+  
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

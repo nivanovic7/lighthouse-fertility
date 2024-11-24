@@ -13,8 +13,6 @@
   --border-radius: 30px;
 
   --section-gap: 8rem;
-
-  --max-width: var(--max-width);
 }
 * {
   box-sizing: border-box;
@@ -95,7 +93,7 @@ section {
   max-width: var(--max-width);
   flex: 1;
   margin: auto;
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 7rem;
   width: 90%;
 }
 
@@ -320,6 +318,7 @@ nav a:hover {
   transition: all 0.3s ease;
   line-height: 1.5;
   overflow: hidden;
+  color: var(--clr-primary-blue);
 }
 
 .list-item-bg-container {
@@ -452,21 +451,24 @@ h3 {
 
 /* ------------- FOOTER ------------------ */
 footer {
-  background-color: #0c3e6b;
-  color: var(--clr-secondary-stone);
+  background-color: var(--clr-secondary-stone);
+  color: var(--clr-primary-blue);
 }
 
 .footer-content {
   display: flex;
   gap: 4rem;
   align-items: end;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
+
   margin: auto;
   width: 90%;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
+
 .footer-content img {
   align-self: flex-start;
+  margin-right: auto;
 }
 
 .contact-info {
@@ -486,5 +488,9 @@ footer a {
 }
 
 footer .highlight {
-  color: white;
+  color: var(--clr-primary-navy);
+}
+
+footer img {
+  max-width: 400px;
 }

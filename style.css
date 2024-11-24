@@ -82,7 +82,7 @@ button:hover {
   color: var(--clr-primary-blue);
   display: flex;
   flex-direction: column;
-  gap: var(--section-gap);
+  /* gap: var(--section-gap); */
   font-family: "Host Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -97,6 +97,36 @@ section {
   margin: auto;
   scroll-margin-top: 4rem;
   width: 90%;
+}
+
+nav,
+section:not(:last-of-type) {
+  margin-bottom: var(--section-gap);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.primary-heading {
+  font-size: 48px;
+  color: var(--clr-primary-navy);
+  line-height: 1.1;
+}
+.secondary-heading {
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--clr-primary-navy);
+  margin-bottom: 4rem;
+}
+.tertiary-heading {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.max-width {
+  max-width: 1400px;
 }
 
 /* -----------NAVIGATION -------------- */
@@ -137,27 +167,6 @@ nav {
   z-index: 100;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.primary-heading {
-  font-size: 48px;
-  color: var(--clr-primary-navy);
-  line-height: 1.1;
-}
-.secondary-heading {
-  font-size: 40px;
-  line-height: 1.2;
-  color: var(--clr-primary-navy);
-  margin-bottom: 4rem;
-}
-.tertiary-heading {
-  font-size: 24px;
-  line-height: 1.2;
-}
-
 .logo-container {
   max-width: 250px;
 }
@@ -175,36 +184,13 @@ nav a {
   position: relative;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  color: var(--clr-primary-blue);
 }
 
-/*------------- SECTION ABOUT ME -------------  */
-
-.section-about-wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
+nav a:hover {
+  color: var(--clr-primary-navy);
 }
 
-.img-wrap {
-  z-index: -10;
-  max-width: 40%;
-
-  background-size: cover;
-  flex-grow: 1;
-  position: relative;
-}
-
-.section-about img {
-  display: block;
-  max-height: 500px;
-  border-radius: var(--border-radius);
-  object-fit: cover;
-  width: 100%;
-}
-
-.about-me-text {
-  max-width: 600px;
-}
 /*------------- SECTION HERO -------------  */
 
 .hero-wrap {
@@ -243,6 +229,11 @@ nav a {
   font-size: 18px;
 }
 
+.hero-cta a {
+  text-decoration: none;
+  color: var(--clr-secondary-stone);
+}
+
 .lighthouse-image-wrap {
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -252,6 +243,127 @@ nav a {
   max-height: 500px;
   width: 100%;
   object-fit: cover;
+  object-position: 50% 20%;
+}
+
+/*-------- SECTION EXPERTISE -------- */
+
+.expertise-section {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  background-color: white;
+  width: 100%;
+  max-width: none;
+}
+
+.expertise-content-wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 90%;
+  margin: auto;
+}
+
+.expertise-content-wrap p {
+  max-width: 600px;
+}
+
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.expertise-list > li {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.expertise-list > li:hover {
+  transform: translateY(-3px);
+}
+
+.show-expertise-list-item {
+  /* background-color: #d4d5d5; */
+  background-color: var(--clr-secondary-stone);
+  color: var(--clr-primary-navy);
+}
+
+.expertise-list-item-desc,
+.expertise-list-item-title {
+  padding: 0 0.5rem;
+}
+
+.expertise-list-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expertise-list img {
+  transition: all 0.3s ease-in-out;
+}
+
+.expertise-list-icon-spin {
+  transform: rotate(180deg);
+}
+
+.expertise-list-item-desc {
+  max-height: 0;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.list-item-bg-container {
+  position: relative;
+}
+
+.show-list-item-desc {
+  max-height: 200px;
+  overflow: visible;
+  padding-top: 1rem;
+}
+
+/*------------- SECTION ABOUT ME -------------  */
+
+.section-about-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin: auto;
+}
+
+.img-wrap {
+  z-index: -10;
+  max-width: 40%;
+
+  background-size: cover;
+  flex-grow: 1;
+  position: relative;
+}
+
+.section-about img {
+  display: block;
+  max-height: 500px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-me-text {
+  max-width: 600px;
+}
+
+.about-me-text bold {
+  font-weight: 800;
 }
 
 /*-------- SECTION CARDS -------- */
@@ -326,102 +438,19 @@ h3 {
   font-size: 18px;
 }
 
-.cta,
-.cta-secondary {
+.cta {
   align-self: center;
   padding: 1.5rem 4rem;
   border-radius: 60px;
   border: none;
 }
 
-.cta-secondary {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
+.cta a {
+  text-decoration: none;
+  color: var(--clr-primary-stone);
 }
 
-/*-------- SECTION EXPERTISE -------- */
-
-.expertise-section {
-  padding-top: var(--section-gap);
-  padding-bottom: var(--section-gap);
-  background-color: white;
-  width: 100%;
-  max-width: none;
-}
-
-.expertise-content-wrap {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1400px;
-  width: 90%;
-  margin: auto;
-}
-
-.expertise-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.expertise-list > li {
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  box-shadow: var(--box-shadow);
-}
-
-.expertise-list > li:hover {
-  transform: translateY(-3px);
-}
-
-.show-expertise-list-item {
-  /* background-color: #d4d5d5; */
-  background-color: var(--clr-secondary-stone);
-  color: var(--clr-primary-navy);
-}
-
-.expertise-list-item-desc,
-.expertise-list-item-title {
-  padding: 0 0.5rem;
-}
-
-.expertise-list-item-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.expertise-list img {
-  transition: all 0.3s ease-in-out;
-}
-
-.expertise-list-icon-spin {
-  transform: rotate(180deg);
-}
-
-.expertise-list-item-desc {
-  max-height: 0;
-  transition: all 0.3s ease;
-  line-height: 1.5;
-  overflow: hidden;
-}
-
-.list-item-bg-container {
-  position: relative;
-}
-
-.show-list-item-desc {
-  max-height: 200px;
-  overflow: visible;
-  padding-top: 1rem;
-}
-
+/* ------------- FOOTER ------------------ */
 footer {
   background-color: #0c3e6b;
   color: var(--clr-secondary-stone);
